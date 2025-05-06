@@ -1,0 +1,14 @@
+﻿  datalink.c
+F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.c(17,9): warning C4005: “FRAME_DATA”: 宏重定义
+      F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.h(3,9):
+      参见“FRAME_DATA”的前一个定义
+  
+F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.c(18,9): warning C4005: “FRAME_ACK”: 宏重定义
+      F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.h(4,9):
+      参见“FRAME_ACK”的前一个定义
+  
+F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.c(19,9): warning C4005: “FRAME_NAK”: 宏重定义
+      F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.h(5,9):
+      参见“FRAME_NAK”的前一个定义
+  
+  datalink.vcxproj -> F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\Debug\datalink.exe

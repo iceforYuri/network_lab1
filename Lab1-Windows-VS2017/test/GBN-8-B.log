@@ -1,0 +1,111 @@
+000.000 =============================================================
+000.000                     Station B                               
+000.000 -------------------------------------------------------------
+000.000 Protocol.lib, version 4.0, jiangyanjun0718@bupt.edu.cn
+000.000 Channel: 8000 bps, 270 ms propagation delay, bit error rate 0
+000.000 Log file "F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\test\GBN-8-B.log", TCP port 59144, debug mask 0x07
+000.000 Station B is connecting station A (TCP port 59144) ... Failed!
+000.000 Station B is connecting station A (TCP port 59144) ... Done.
+000.608 New epoch: Sun May  4 20:13:13 2025
+000.608 =================================================================
+000.608 
+000.608 Designed by Jiang Yanjun (Modified for GBN), build: May  2 2025  23:14:07
+000.608 Send DATA 0 7, ID 20000
+000.608 Send DATA 1 7, ID 20001
+000.608 Send DATA 2 7, ID 20002
+000.608 Send DATA 3 7, ID 20003
+000.609 Send DATA 4 7, ID 20004
+000.609 Send DATA 5 7, ID 20005
+000.609 Send DATA 6 7, ID 20006
+001.178 Recv DATA 0 7, ID 10000
+001.178 Send ACK 0
+001.439 Recv DATA 1 7, ID 10001
+001.440 Send ACK 1
+001.708 Recv DATA 2 7, ID 10002
+001.708 Send ACK 2
+001.985 Recv DATA 3 7, ID 10003
+001.986 Send ACK 3
+002.201 Recv DATA 4 7, ID 10004
+002.201 Send ACK 4
+002.461 Recv DATA 5 7, ID 10005
+002.461 Send ACK 5
+002.754 Recv DATA 6 7, ID 10006
+002.754 Send ACK 6
+002.784 Send DATA 7 6, ID 20007
+002.788 Send DATA 0 6, ID 20008
+003.044 Send DATA 1 6, ID 20009
+003.075 Send DATA 2 6, ID 20010
+003.138 Send DATA 3 6, ID 20011
+003.201 Send DATA 4 6, ID 20012
+003.201 Send DATA 5 6, ID 20013
+003.265 Recv DATA 7 6, ID 10007
+003.265 .... 8 packets received, 6875 bps, 85.94%, Err 0 (0.0e+00)
+003.265 Send ACK 7
+003.543 Recv DATA 0 6, ID 10008
+003.544 Send ACK 0
+003.818 Recv DATA 1 6, ID 10009
+003.819 Send ACK 1
+004.050 Recv DATA 2 6, ID 10010
+004.064 Send ACK 2
+004.325 Recv DATA 3 6, ID 10011
+004.325 Send ACK 3
+004.617 Recv DATA 4 6, ID 10012
+004.617 Send ACK 4
+004.841 Recv DATA 5 6, ID 10013
+004.842 Send ACK 5
+004.886 Send DATA 6 5, ID 20014
+005.177 Send DATA 7 5, ID 20015
+005.209 Send DATA 0 5, ID 20016
+005.240 Send DATA 1 5, ID 20017
+005.256 Send DATA 2 5, ID 20018
+005.286 Send DATA 3 5, ID 20019
+005.317 Send DATA 4 5, ID 20020
+005.458 Recv DATA 6 5, ID 10014
+005.459 .... 15 packets received, 6713 bps, 83.92%, Err 0 (0.0e+00)
+005.459 Send ACK 6
+005.748 Recv DATA 7 5, ID 10015
+005.749 Send ACK 7
+005.967 Recv DATA 0 5, ID 10016
+005.968 Send ACK 0
+006.262 Recv DATA 1 5, ID 10017
+006.262 Send ACK 1
+006.525 Recv DATA 2 5, ID 10018
+006.526 Send ACK 2
+006.772 Recv DATA 3 5, ID 10019
+006.773 Send ACK 3
+007.034 Recv DATA 4 5, ID 10020
+007.034 Send ACK 4
+007.065 Send DATA 5 4, ID 20021
+007.095 Send DATA 6 4, ID 20022
+007.311 Send DATA 7 4, ID 20023
+007.342 Send DATA 0 4, ID 20024
+007.359 Send DATA 1 4, ID 20025
+007.406 Send DATA 2 4, ID 20026
+007.436 Send DATA 3 4, ID 20027
+007.607 Recv DATA 5 4, ID 10021
+007.607 .... 22 packets received, 6700 bps, 83.75%, Err 0 (0.0e+00)
+007.607 Send ACK 5
+007.853 Recv DATA 6 4, ID 10022
+007.853 Send ACK 6
+008.132 Recv DATA 7 4, ID 10023
+008.133 Send ACK 7
+008.407 Recv DATA 0 4, ID 10024
+008.407 Send ACK 0
+008.623 Recv DATA 1 4, ID 10025
+008.624 Send ACK 1
+008.885 Recv DATA 2 4, ID 10026
+008.886 Send ACK 2
+009.154 Recv DATA 3 4, ID 10027
+009.154 Send ACK 3
+009.211 Send DATA 4 3, ID 20028
+009.474 Send DATA 5 3, ID 20029
+009.476 Send DATA 6 3, ID 20030
+009.506 Send DATA 7 3, ID 20031
+009.535 Send DATA 0 3, ID 20032
+009.566 Send DATA 1 3, ID 20033
+009.567 Send DATA 2 3, ID 20034
+009.736 Recv DATA 4 3, ID 10028
+009.737 .... 29 packets received, 6708 bps, 83.85%, Err 0 (0.0e+00)
+009.737 Send ACK 4
+009.985 Recv DATA 5 3, ID 10029
+009.987 Send ACK 5

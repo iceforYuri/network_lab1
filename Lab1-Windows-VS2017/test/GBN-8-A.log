@@ -1,0 +1,217 @@
+000.000 =============================================================
+000.000                     Station A                               
+000.000 -------------------------------------------------------------
+000.000 Protocol.lib, version 4.0, jiangyanjun0718@bupt.edu.cn
+000.000 Channel: 8000 bps, 270 ms propagation delay, bit error rate 0
+000.000 Log file "F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\Debug\datalink-A.log", TCP port 59144, debug mask 0x07
+000.000 Station A is waiting for station B on TCP port 59144 ... Done.
+000.704 New epoch: Mon May  5 10:59:02 2025
+000.704 =================================================================
+000.704 
+000.704 SR-1 再次优化 (模仿 SR-2 关键逻辑), 构建时间: May  5 2025  10:58:56
+000.704 发送 DATA 0 31, ID 10000
+000.952 发送 DATA 1 31, ID 10001
+001.213 发送 DATA 2 31, ID 10002
+001.290 收到 DATA 0 31, ID 20000
+001.291 frame_expected = 0, too_far = 16
+001.475 发送 DATA 3 0, ID 10003
+001.537 收到 DATA 1 31, ID 20001
+001.538 frame_expected = 1, too_far = 17
+001.740 发送 DATA 4 1, ID 10004
+001.801 收到 DATA 2 31, ID 20002
+001.801 frame_expected = 2, too_far = 18
+002.017 发送 DATA 5 2, ID 10005
+002.049 收到 DATA 3 0, ID 20003
+002.049 frame_expected = 3, too_far = 19
+002.267 发送 DATA 6 3, ID 10006
+002.314 收到 DATA 4 1, ID 20004
+002.315 frame_expected = 4, too_far = 20
+002.529 发送 DATA 7 4, ID 10007
+002.576 收到 DATA 5 2, ID 20005
+002.576 frame_expected = 5, too_far = 21
+002.794 发送 DATA 8 5, ID 10008
+002.840 收到 DATA 6 3, ID 20006
+002.841 frame_expected = 6, too_far = 22
+003.084 发送 DATA 9 6, ID 10009
+003.116 收到 DATA 7 4, ID 20007
+003.117 frame_expected = 7, too_far = 23
+003.117 .... 8 packets received, 7674 bps, 95.93%, Err 0 (0.0e+00)
+003.349 发送 DATA 10 7, ID 10010
+003.379 收到 DATA 8 5, ID 20008
+003.380 frame_expected = 8, too_far = 24
+003.613 收到 DATA 9 6, ID 20009
+003.614 frame_expected = 9, too_far = 25
+003.615 发送 DATA 11 9, ID 10011
+003.862 发送 DATA 12 9, ID 10012
+003.910 收到 DATA 10 7, ID 20010
+003.911 frame_expected = 10, too_far = 26
+004.123 发送 DATA 13 10, ID 10013
+004.171 收到 DATA 11 9, ID 20011
+004.171 frame_expected = 11, too_far = 27
+004.389 发送 DATA 14 11, ID 10014
+004.450 收到 DATA 12 9, ID 20012
+004.450 frame_expected = 12, too_far = 28
+004.665 发送 DATA 15 12, ID 10015
+004.726 收到 DATA 13 10, ID 20013
+004.727 frame_expected = 13, too_far = 29
+004.914 发送 DATA 16 13, ID 10016
+004.992 收到 DATA 14 11, ID 20014
+004.993 frame_expected = 14, too_far = 30
+005.176 发送 DATA 17 14, ID 10017
+005.208 收到 DATA 15 12, ID 20015
+005.208 frame_expected = 15, too_far = 31
+005.209 .... 16 packets received, 7752 bps, 96.90%, Err 0 (0.0e+00)
+005.441 发送 DATA 18 15, ID 10018
+005.472 收到 DATA 16 13, ID 20016
+005.473 frame_expected = 16, too_far = 0
+005.719 发送 DATA 19 16, ID 10019
+005.751 收到 DATA 17 14, ID 20017
+005.752 frame_expected = 17, too_far = 1
+005.967 发送 DATA 20 17, ID 10020
+006.031 收到 DATA 18 15, ID 20018
+006.032 frame_expected = 18, too_far = 2
+006.246 发送 DATA 21 18, ID 10021
+006.277 收到 DATA 19 16, ID 20019
+006.277 frame_expected = 19, too_far = 3
+006.495 发送 DATA 22 19, ID 10022
+006.572 收到 DATA 20 17, ID 20020
+006.573 frame_expected = 20, too_far = 4
+006.759 发送 DATA 23 20, ID 10023
+006.791 收到 DATA 21 18, ID 20021
+006.791 frame_expected = 21, too_far = 5
+007.023 发送 DATA 24 21, ID 10024
+007.054 收到 DATA 22 19, ID 20022
+007.055 frame_expected = 22, too_far = 6
+007.287 发送 DATA 25 22, ID 10025
+007.318 收到 DATA 23 20, ID 20023
+007.319 frame_expected = 23, too_far = 7
+007.319 .... 24 packets received, 7756 bps, 96.95%, Err 0 (0.0e+00)
+007.563 发送 DATA 26 23, ID 10026
+007.594 收到 DATA 24 21, ID 20024
+007.595 frame_expected = 24, too_far = 8
+007.828 发送 DATA 27 24, ID 10027
+007.859 收到 DATA 25 22, ID 20025
+007.859 frame_expected = 25, too_far = 9
+008.092 发送 DATA 28 25, ID 10028
+008.124 收到 DATA 26 23, ID 20026
+008.124 frame_expected = 26, too_far = 10
+008.342 发送 DATA 29 26, ID 10029
+008.403 收到 DATA 27 24, ID 20027
+008.405 frame_expected = 27, too_far = 11
+008.605 发送 DATA 30 27, ID 10030
+008.681 收到 DATA 28 25, ID 20028
+008.682 frame_expected = 28, too_far = 12
+008.881 发送 DATA 31 28, ID 10031
+008.942 收到 DATA 29 26, ID 20029
+008.943 frame_expected = 29, too_far = 13
+009.143 发送 DATA 0 29, ID 10032
+009.205 收到 DATA 30 27, ID 20030
+009.206 frame_expected = 30, too_far = 14
+009.423 发送 DATA 1 30, ID 10033
+009.484 收到 DATA 31 28, ID 20031
+009.484 frame_expected = 31, too_far = 15
+009.485 .... 32 packets received, 7707 bps, 96.34%, Err 0 (0.0e+00)
+009.673 发送 DATA 2 31, ID 10034
+009.703 收到 DATA 0 29, ID 20032
+009.704 frame_expected = 0, too_far = 16
+009.936 发送 DATA 3 0, ID 10035
+009.967 收到 DATA 1 30, ID 20033
+009.968 frame_expected = 1, too_far = 17
+010.201 发送 DATA 4 1, ID 10036
+010.232 收到 DATA 2 31, ID 20034
+010.233 frame_expected = 2, too_far = 18
+010.463 发送 DATA 5 2, ID 10037
+010.493 收到 DATA 3 0, ID 20035
+010.494 frame_expected = 3, too_far = 19
+010.742 发送 DATA 6 3, ID 10038
+010.773 收到 DATA 4 1, ID 20036
+010.773 frame_expected = 4, too_far = 20
+011.003 收到 DATA 5 2, ID 20037
+011.004 frame_expected = 5, too_far = 21
+011.005 发送 DATA 7 5, ID 10039
+011.250 发送 DATA 8 5, ID 10040
+011.297 收到 DATA 6 3, ID 20038
+011.297 frame_expected = 6, too_far = 22
+011.511 发送 DATA 9 6, ID 10041
+011.558 收到 DATA 7 5, ID 20039
+011.558 frame_expected = 7, too_far = 23
+011.558 .... 40 packets received, 7745 bps, 96.81%, Err 0 (0.0e+00)
+011.776 发送 DATA 10 7, ID 10042
+011.823 收到 DATA 8 5, ID 20040
+011.824 frame_expected = 8, too_far = 24
+012.039 发送 DATA 11 8, ID 10043
+012.085 收到 DATA 9 6, ID 20041
+012.086 frame_expected = 9, too_far = 25
+012.315 发送 DATA 12 9, ID 10044
+012.361 收到 DATA 10 7, ID 20042
+012.361 frame_expected = 10, too_far = 26
+012.578 发送 DATA 13 10, ID 10045
+012.624 收到 DATA 11 8, ID 20043
+012.624 frame_expected = 11, too_far = 27
+012.841 发送 DATA 14 11, ID 10046
+012.887 收到 DATA 12 9, ID 20044
+012.888 frame_expected = 12, too_far = 28
+013.104 发送 DATA 15 12, ID 10047
+013.151 收到 DATA 13 10, ID 20045
+013.151 frame_expected = 13, too_far = 29
+013.383 发送 DATA 16 13, ID 10048
+013.414 收到 DATA 14 11, ID 20046
+013.415 frame_expected = 14, too_far = 30
+013.634 发送 DATA 17 14, ID 10049
+013.666 收到 DATA 15 12, ID 20047
+013.666 frame_expected = 15, too_far = 31
+013.666 .... 48 packets received, 7750 bps, 96.87%, Err 0 (0.0e+00)
+013.898 发送 DATA 18 15, ID 10050
+013.960 收到 DATA 16 13, ID 20048
+013.961 frame_expected = 16, too_far = 0
+014.159 发送 DATA 19 16, ID 10051
+014.207 收到 DATA 17 14, ID 20049
+014.208 frame_expected = 17, too_far = 1
+014.424 发送 DATA 20 17, ID 10052
+014.471 收到 DATA 18 15, ID 20050
+014.471 frame_expected = 18, too_far = 2
+014.688 发送 DATA 21 18, ID 10053
+014.735 收到 DATA 19 16, ID 20051
+014.736 frame_expected = 19, too_far = 3
+014.967 发送 DATA 22 19, ID 10054
+014.998 收到 DATA 20 17, ID 20052
+014.998 frame_expected = 20, too_far = 4
+015.230 收到 DATA 21 18, ID 20053
+015.230 frame_expected = 21, too_far = 5
+015.231 发送 DATA 23 21, ID 10055
+015.479 发送 DATA 24 21, ID 10056
+015.509 收到 DATA 22 19, ID 20054
+015.510 frame_expected = 22, too_far = 6
+015.741 发送 DATA 25 22, ID 10057
+015.772 收到 DATA 23 21, ID 20055
+015.772 frame_expected = 23, too_far = 7
+015.772 .... 56 packets received, 7754 bps, 96.92%, Err 0 (0.0e+00)
+016.003 发送 DATA 26 23, ID 10058
+016.034 收到 DATA 24 21, ID 20056
+016.035 frame_expected = 24, too_far = 8
+016.265 发送 DATA 27 24, ID 10059
+016.296 收到 DATA 25 22, ID 20057
+016.297 frame_expected = 25, too_far = 9
+016.527 发送 DATA 28 25, ID 10060
+016.589 收到 DATA 26 23, ID 20058
+016.590 frame_expected = 26, too_far = 10
+016.805 发送 DATA 29 26, ID 10061
+016.836 收到 DATA 27 24, ID 20059
+016.837 frame_expected = 27, too_far = 11
+017.068 发送 DATA 30 27, ID 10062
+017.100 收到 DATA 28 25, ID 20060
+017.101 frame_expected = 28, too_far = 12
+017.318 发送 DATA 31 28, ID 10063
+017.394 收到 DATA 29 26, ID 20061
+017.396 frame_expected = 29, too_far = 13
+017.595 发送 DATA 0 29, ID 10064
+017.626 收到 DATA 30 27, ID 20062
+017.627 frame_expected = 30, too_far = 14
+017.859 发送 DATA 1 30, ID 10065
+017.890 收到 DATA 31 28, ID 20063
+017.891 frame_expected = 31, too_far = 15
+017.891 .... 64 packets received, 7752 bps, 96.90%, Err 0 (0.0e+00)
+018.122 发送 DATA 2 31, ID 10066
+018.152 收到 DATA 0 29, ID 20064
+018.153 frame_expected = 0, too_far = 16
+018.153 TCP Disconnected.

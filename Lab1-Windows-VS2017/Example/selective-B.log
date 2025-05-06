@@ -1,0 +1,685 @@
+000.000 =============================================================
+000.000                     Station B                               
+000.000 -------------------------------------------------------------
+000.000 Protocol.lib, version 4.0, jiangyanjun0718@bupt.edu.cn
+000.000 Channel: 8000 bps, 270 ms propagation delay, bit error rate 1.0E-004
+000.000 Log file "F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\example\selective-B.log", TCP port 59144, debug mask 0x07
+000.000 Station B is connecting station A (TCP port 59144) ... Done.
+000.964 New epoch: Tue May 06 13:11:51 2025
+000.965 =================================================================
+000.965 
+000.965 Designed by Jiang Yanjun, build: Oct 28 2018  16:37:15
+000.965 Send Queue Empty
+000.965 Send DATA  0 43, ID 20000, Window  1, PHL Queue 0
+001.216 Send DATA  1 43, ID 20001, Window  2, PHL Queue 26
+001.476 Send DATA  2 43, ID 20002, Window  3, PHL Queue 34
+001.507 Recv DATA  0 43, ID 10000, Window  0  22
+001.740 Send DATA  3  0, ID 20003, Window  4, PHL Queue 34
+001.771 Recv DATA  1 43, ID 10001, Window  1  23
+002.019 Send DATA  4  1, ID 20004, Window  5, PHL Queue 4
+002.066 Recv DATA  2 43, ID 10002, Window  2  24
+002.096 Recv NAK  43
+002.096 Send DATA  0  2, ID 20000, Window  5, PHL Queue 436
+002.330 Recv DATA  3 43, ID 10003, Window  3  25
+002.533 Send DATA  5  3, ID 20005, Window  6, PHL Queue 32
+002.595 Recv DATA  4 43, ID 10004, Window  4  26
+002.798 Send DATA  6  4, ID 20006, Window  7, PHL Queue 30
+002.828 Recv DATA  5 43, ID 10005, Window  5  27
+002.987 Impose noise on received data, 1/16168=6.2E-005
+003.034 Impose noise on received data, 2/16544=1.2E-004
+003.064 Send DATA  7  5, ID 20007, Window  8, PHL Queue 26
+003.095 Recv DATA  6 43, ID 10006, Window  6  28
+003.330 Send DATA  8  6, ID 20008, Window  9, PHL Queue 22
+003.392 Receiver Error 1: Bad CRC checksum
+003.392 Send NAK   6
+003.408 Impose noise on received data, 3/19416=1.5E-004
+003.608 Send DATA  9  6, ID 20009, Window 10, PHL Queue 8
+003.638 Recv DATA  8  0, ID 10008, Window  7  29
+003.669 Recv NAK   0
+003.669 Send DATA  1  6, ID 20001, Window  9, PHL Queue 474
+003.670 Recv Half ACK 2 3 4 5
+003.902 Receiver Error 2: Bad CRC checksum
+004.027 Impose noise on received data, 4/24488=1.6E-004
+004.121 Send DATA 10  6, ID 20010, Window 10, PHL Queue 38
+004.168 Recv DATA 10  0, ID 10010, Window  7  29
+004.387 Send DATA 11  6, ID 20011, Window 11, PHL Queue 34
+004.418 Receiver Error 3: Bad CRC checksum
+004.651 Send DATA 12  6, ID 20012, Window 12, PHL Queue 34
+004.712 Recv DATA  7  0, ID 10007, Window  7  29
+004.713 .... 8 packets received, 4701 bps, 58.77%, Err 4 (1.4e-004)
+004.713 Send ACK   8
+004.915 Send DATA 13  8, ID 20013, Window 13, PHL Queue 48
+004.976 Recv DATA 12  0, ID 10012, Window  9  31
+004.977 Send NAK   8
+004.978 Send Half ACK 10 12
+005.007 Recv ACK   9
+005.054 Impose noise on received data, 5/32704=1.5E-004
+005.192 Send DATA 14  8, ID 20014, Window  5, PHL Queue 40
+005.252 Recv DATA 13  9, ID 10013, Window  9  31
+005.453 Send DATA 15  8, ID 20015, Window  6, PHL Queue 46
+005.515 Receiver Error 4: Bad CRC checksum
+005.578 Recv NAK  10
+005.578 Send DATA 11  8, ID 20011, Window  6, PHL Queue 356
+005.765 Recv DATA 15 10, ID 10015, Window  9  31
+005.996 Send DATA 16  8, ID 20016, Window  6, PHL Queue 16
+006.027 Recv DATA 16 10, ID 10016, Window  9  31
+006.258 Send DATA 17  8, ID 20017, Window  7, PHL Queue 20
+006.318 Recv DATA  9 10, ID 10009, Window  9  31
+006.319 Send ACK  10
+006.520 Send DATA 18 10, ID 20018, Window  8, PHL Queue 38
+006.582 Recv DATA 17 10, ID 10017, Window 11  33
+006.584 Send NAK  10
+006.585 Send Half ACK 12 13 15 16 17
+006.801 Send DATA 19 10, ID 20019, Window  9, PHL Queue 28
+006.846 Recv DATA 18 10, ID 10018, Window 11  33
+006.877 Recv ACK  12
+007.063 Send DATA 20 10, ID 20020, Window  8, PHL Queue 32
+007.125 Recv DATA 19 12, ID 10019, Window 11  33
+007.156 Recv NAK  12
+007.156 Send DATA 13 10, ID 20013, Window  8, PHL Queue 434
+007.158 Recv Half ACK 14 15 16
+007.403 Recv DATA 20 12, ID 10020, Window 11  33
+007.590 Send DATA 21 10, ID 20021, Window  9, PHL Queue 34
+007.652 Recv DATA 11 12, ID 10011, Window 11  33
+007.653 .... 12 packets received, 3825 bps, 47.81%, Err 5 (9.4e-005)
+007.654 Send ACK  13
+007.730 Impose noise on received data, 6/54112=1.1E-004
+007.855 Send DATA 22 13, ID 20022, Window 10, PHL Queue 46
+007.917 Recv DATA 11 12, ID 10011, Window 14  36
+007.919 Discard DATA 11, out of receiving window
+008.132 Send DATA 23 13, ID 20023, Window 11, PHL Queue 20
+008.163 Recv DATA 21 12, ID 10021, Window 14  36
+008.164 Send NAK  13
+008.165 Send Half ACK 15 16 17 18 19 20 21
+008.410 Send DATA 24 13, ID 20024, Window 12, PHL Queue 20
+008.441 Recv DATA 22 12, ID 10022, Window 14  36
+008.472 Recv ACK  17
+008.672 Send DATA 25 13, ID 20025, Window  8, PHL Queue 24
+008.703 Recv DATA 23 17, ID 10023, Window 14  36
+008.734 Recv NAK  17
+008.734 Send DATA 18 13, ID 20018, Window  8, PHL Queue 488
+008.735 Recv Half ACK 19 20 21
+008.965 Recv DATA 24 17, ID 10024, Window 14  36
+009.198 Send DATA 26 13, ID 20026, Window  9, PHL Queue 28
+009.229 Recv DATA 25 17, ID 10025, Window 14  36
+009.368 Impose noise on received data, 7/67216=1.0E-004
+009.476 Send Queue Empty
+009.476 Send DATA 27 13, ID 20027, Window 10, PHL Queue 0
+009.507 Recv DATA 14 17, ID 10014, Window 14  36
+009.509 Send ACK  25
+009.723 Send DATA 28 25, ID 20028, Window 11, PHL Queue 48
+009.786 Recv DATA 26 17, ID 10026, Window 26   4
+009.786 .... 27 packets received, 6461 bps, 80.76%, Err 7 (1.0e-004)
+010.002 Impose noise on received data, 8/72288=1.1E-004
+010.002 Send DATA 29 26, ID 20029, Window 12, PHL Queue 18
+010.048 Recv DATA 27 17, ID 10027, Window 27   5
+010.080 Recv ACK  23
+010.111 Recv NAK  23
+010.111 Send DATA 24 27, ID 20024, Window  6, PHL Queue 390
+010.112 Recv Half ACK 25 26
+010.221 Impose noise on received data, 9/74040=1.2E-004
+010.317 Receiver Error 5: Bad CRC checksum
+010.318 Send NAK  27
+010.545 Send Queue Empty
+010.545 Send DATA 30 27, ID 20030, Window  7, PHL Queue 2
+010.592 Recv DATA 29 23, ID 10029, Window 28   6
+010.669 Impose noise on received data, 10/77624=1.3E-004
+010.793 Send DATA 31 27, ID 20031, Window  8, PHL Queue 34
+010.870 Recv DATA 30 23, ID 10030, Window 28   6
+011.070 Send DATA 32 27, ID 20032, Window  9, PHL Queue 8
+011.100 Receiver Error 6: Bad CRC checksum
+011.316 Send DATA 33 27, ID 20033, Window 10, PHL Queue 44
+011.364 Recv DATA 32 23, ID 10032, Window 28   6
+011.396 Recv ACK  28
+011.592 Send DATA 34 27, ID 20034, Window  6, PHL Queue 20
+011.670 Recv DATA 28 28, ID 10028, Window 28   6
+011.671 Send ACK  30
+011.701 Recv NAK  28
+011.702 Send DATA 29 30, ID 20029, Window  6, PHL Queue 404
+011.703 Recv Half ACK 30
+011.917 Recv DATA 33 28, ID 10033, Window 31   9
+011.918 Send NAK  30
+011.918 Send Half ACK 32 33
+011.977 Impose noise on received data, 11/88088=1.2E-004
+012.132 Send DATA 35 30, ID 20035, Window  7, PHL Queue 28
+012.163 Recv DATA 34 28, ID 10034, Window 31   9
+012.377 Impose noise on received data, 12/91288=1.3E-004
+012.408 Send DATA 36 30, ID 20036, Window  8, PHL Queue 4
+012.438 Recv DATA 35 28, ID 10035, Window 31   9
+012.655 Send DATA 37 30, ID 20037, Window  9, PHL Queue 38
+012.702 Receiver Error 7: Bad CRC checksum
+012.919 Send DATA 38 30, ID 20038, Window 10, PHL Queue 38
+012.967 Recv DATA 37 28, ID 10037, Window 31   9
+013.184 Send DATA 39 30, ID 20039, Window 11, PHL Queue 36
+013.247 Recv DATA 31 28, ID 10031, Window 31   9
+013.248 .... 32 packets received, 5452 bps, 68.15%, Err 12 (1.2e-004)
+013.248 Send ACK  35
+013.451 Send DATA 40 35, ID 20040, Window 12, PHL Queue 44
+013.514 Recv DATA 38 28, ID 10038, Window 36  14
+013.514 Send NAK  35
+013.515 Send Half ACK 37 38
+013.733 Send DATA 41 35, ID 20041, Window 13, PHL Queue 26
+013.763 Recv DATA 39 28, ID 10039, Window 36  14
+013.856 Timeout DATA 31, retransmit 0
+013.856 Send DATA 31 35, ID 20031, Window 13, PHL Queue 308
+014.028 Recv DATA 40 28, ID 10040, Window 36  14
+014.260 Send DATA 42 35, ID 20042, Window 14, PHL Queue 28
+014.291 Recv DATA 41 28, ID 10041, Window 36  14
+014.492 Impose noise on received data, 13/108200=1.2E-004
+014.523 Send DATA 43 35, ID 20043, Window 15, PHL Queue 30
+014.554 Recv DATA 42 28, ID 10042, Window 36  14
+014.787 Send DATA  0 35, ID 20044, Window 16, PHL Queue 30
+014.819 Receiver Error 8: Bad CRC checksum
+015.052 Send DATA  1 35, ID 20045, Window 17, PHL Queue 28
+015.082 Recv DATA 43 28, ID 10043, Window 36  14
+015.145 Timeout DATA 29, retransmit 1
+015.146 Send DATA 29 35, ID 20029, Window 17, PHL Queue 370
+015.177 Impose noise on received data, 14/113688=1.2E-004
+015.347 Recv DATA  0 28, ID 10044, Window 36  14
+015.597 Send Queue Empty
+015.598 Send DATA  2 35, ID 20046, Window 18, PHL Queue 0
+015.629 Receiver Error 9: Bad CRC checksum
+015.848 Send DATA  3 35, ID 20047, Window 19, PHL Queue 20
+015.880 Recv DATA  2 28, ID 10046, Window 36  14
+016.112 Recv DATA  3 28, ID 10047, Window 36  14
+016.113 Send DATA  4 35, ID 20048, Window 20, PHL Queue 20
+016.235 Impose noise on received data, 15/122152=1.2E-004
+016.373 Recv DATA  4 28, ID 10048, Window 36  14
+016.374 Send DATA  5 35, ID 20049, Window 21, PHL Queue 24
+016.450 Recv ACK  37
+016.637 Send DATA  6 35, ID 20050, Window 13, PHL Queue 26
+016.684 Receiver Error 10: Bad CRC checksum
+016.716 Recv NAK  37
+016.716 Send DATA 38 35, ID 20038, Window 13, PHL Queue 428
+016.717 Recv Half ACK 39 40 41 42 43 0 1 2
+016.949 Recv DATA 39 37, ID 10039, Window 36  14
+016.951 Discard DATA 39, duplicated data
+017.167 Send DATA  7 35, ID 20051, Window 14, PHL Queue 22
+017.229 Recv DATA  6 37, ID 10050, Window 36  14
+017.428 Send DATA  8 35, ID 20052, Window 15, PHL Queue 28
+017.489 Recv DATA  7 37, ID 10051, Window 36  14
+017.692 Send DATA  9 35, ID 20053, Window 16, PHL Queue 28
+017.769 Recv DATA  8 37, ID 10052, Window 36  14
+017.954 Send DATA 10 35, ID 20054, Window 17, PHL Queue 32
+018.032 Recv DATA  9 37, ID 10053, Window 36  14
+018.062 Recv ACK   3
+018.218 Send DATA 11 35, ID 20055, Window  8, PHL Queue 32
+018.295 Recv DATA 36  3, ID 10036, Window 36  14
+018.295 .... 37 packets received, 4440 bps, 55.50%, Err 15 (1.1e-004)
+018.296 Send ACK   0
+018.326 Recv NAK   3
+018.326 Send DATA  4  0, ID 20048, Window  8, PHL Queue 416
+018.327 Recv Half ACK 5 7
+018.557 Recv DATA 10  3, ID 10054, Window  1  23
+018.557 Send NAK   0
+018.558 Send Half ACK 2 3 4 6 7 8 9 10
+018.771 Send DATA 12  0, ID 20056, Window  9, PHL Queue 26
+018.802 Recv DATA 11  3, ID 10055, Window  1  23
+019.050 Send Queue Empty
+019.050 Send DATA 13  0, ID 20057, Window 10, PHL Queue 0
+019.082 Recv DATA 12  3, ID 10056, Window  1  23
+019.301 Send DATA 14  0, ID 20058, Window 11, PHL Queue 22
+019.347 Recv DATA 13  3, ID 10057, Window  1  23
+019.378 Recv ACK   5
+019.562 Send DATA 15  0, ID 20059, Window 10, PHL Queue 28
+019.608 Recv DATA 14  5, ID 10058, Window  1  23
+019.716 Timeout DATA 6, retransmit 2
+019.716 Send DATA  6  0, ID 20050, Window 10, PHL Queue 248
+019.870 Recv DATA  1  5, ID 10045, Window  1  23
+019.872 Send ACK   4
+019.900 Recv NAK   5
+019.900 Send DATA  6  4, ID 20050, Window 10, PHL Queue 476
+019.901 Recv Half ACK 7 8 9 10 11 12
+020.071 Impose noise on received data, 16/152840=1.0E-004
+020.164 Recv DATA 15  5, ID 10059, Window  5  27
+020.164 Send NAK   4
+020.165 Send Half ACK 6 7 8 9 10 11 12 13 14 15
+020.368 Send DATA 16  4, ID 20060, Window 11, PHL Queue 48
+020.445 Recv DATA 16  5, ID 10060, Window  5  27
+020.633 Send DATA 17  4, ID 20061, Window 12, PHL Queue 46
+020.710 Recv DATA 17  5, ID 10061, Window  5  27
+020.711 Impose noise on received data, 17/157952=1.1E-004
+020.757 Recv ACK  12
+020.897 Send DATA 18  4, ID 20062, Window  6, PHL Queue 46
+020.959 Recv DATA 18 12, ID 10062, Window  5  27
+021.161 Send DATA 19  4, ID 20063, Window  7, PHL Queue 46
+021.192 Recv DATA 19 12, ID 10063, Window  5  27
+021.425 Send DATA 20  4, ID 20064, Window  8, PHL Queue 46
+021.488 Recv DATA  5 12, ID 10049, Window  5  27
+021.489 .... 50 packets received, 5054 bps, 63.18%, Err 17 (1.0e-004)
+021.490 Send ACK  19
+021.520 Recv NAK  12
+021.520 Send DATA 13 19, ID 20057, Window  8, PHL Queue 458
+021.521 Recv Half ACK 15
+021.753 Recv DATA 20 12, ID 10064, Window 20  42
+021.973 Send DATA 21 20, ID 20065, Window  9, PHL Queue 20
+022.020 Recv DATA 21 12, ID 10065, Window 21  43
+022.052 Impose noise on received data, 18/168560=1.1E-004
+022.235 Send DATA 22 21, ID 20066, Window 10, PHL Queue 24
+022.282 Recv DATA 22 12, ID 10066, Window 22   0
+022.499 Send DATA 23 22, ID 20067, Window 11, PHL Queue 24
+022.547 Receiver Error 11: Bad CRC checksum
+022.547 Send NAK  22
+022.579 Impose noise on received data, 19/172904=1.1E-004
+022.765 Send DATA 24 22, ID 20068, Window 12, PHL Queue 34
+022.827 Recv DATA 24 12, ID 10068, Window 23   1
+023.030 Send DATA 25 22, ID 20069, Window 13, PHL Queue 32
+023.107 Receiver Error 12: Bad CRC checksum
+023.137 Recv NAK  13
+023.137 Send DATA 14 22, ID 20058, Window 13, PHL Queue 406
+023.138 Recv Half ACK 15 17 18 19 20 21
+023.369 Recv DATA 26 13, ID 10070, Window 23   1
+023.448 Timeout DATA 16, retransmit 3
+023.449 Send DATA 16 22, ID 20060, Window 12, PHL Queue 252
+023.620 Recv DATA 27 13, ID 10071, Window 23   1
+023.822 Send DATA 26 22, ID 20070, Window 13, PHL Queue 32
+023.885 Recv DATA 23 13, ID 10067, Window 23   1
+023.886 .... 68 packets received, 6146 bps, 76.83%, Err 19 (1.0e-004)
+023.886 Send ACK  24
+023.946 Impose noise on received data, 20/183840=1.1E-004
+024.100 Send DATA 27 24, ID 20071, Window 14, PHL Queue 18
+024.130 Recv DATA 28 13, ID 10072, Window 25   3
+024.131 Send NAK  24
+024.131 Send Half ACK 26 27 28
+024.378 Send DATA 28 24, ID 20072, Window 15, PHL Queue 10
+024.409 Receiver Error 13: Bad CRC checksum
+024.425 Recv ACK  15
+024.472 Recv ACK  22
+024.631 Send DATA 29 24, ID 20073, Window  7, PHL Queue 32
+024.692 Recv DATA 30 22, ID 10074, Window 25   3
+024.893 Send DATA 30 24, ID 20074, Window  8, PHL Queue 36
+024.970 Recv DATA 31 22, ID 10075, Window 25   3
+025.000 Recv NAK  22
+025.001 Send DATA 23 24, ID 20067, Window  8, PHL Queue 408
+025.001 Recv Half ACK 24
+025.232 Recv DATA 32 22, ID 10076, Window 25   3
+025.325 Impose noise on received data, 21/194872=1.1E-004
+025.436 Send DATA 31 24, ID 20075, Window  9, PHL Queue 6
+025.497 Recv DATA 25 22, ID 10069, Window 25   3
+025.498 Send ACK  28
+025.701 Send DATA 32 28, ID 20076, Window 10, PHL Queue 18
+025.762 Receiver Error 14: Bad CRC checksum
+025.762 Send NAK  28
+025.762 Send Half ACK 30 31 32
+025.965 Send DATA 33 28, ID 20077, Window 11, PHL Queue 38
+026.028 Recv DATA 34 22, ID 10078, Window 29   7
+026.230 Send DATA 34 28, ID 20078, Window 12, PHL Queue 36
+026.306 Recv DATA 35 22, ID 10079, Window 29   7
+026.338 Recv ACK  24
+026.490 Send DATA 35 28, ID 20079, Window 11, PHL Queue 44
+026.538 Recv DATA 36 24, ID 10080, Window 29   7
+026.568 Recv NAK  24
+026.568 Send DATA 25 28, ID 20069, Window 11, PHL Queue 476
+026.569 Recv Half ACK 27 28 29 30 31
+026.831 Recv DATA 37 24, ID 10081, Window 29   7
+026.894 Timeout DATA 26, retransmit 4
+026.894 Send DATA 26 28, ID 20070, Window 11, PHL Queue 292
+027.094 Recv DATA 29 24, ID 10073, Window 29   7
+027.094 .... 74 packets received, 5859 bps, 73.24%, Err 21 (1.0e-004)
+027.095 Send ACK  32
+027.310 Send Queue Empty
+027.311 Send DATA 36 32, ID 20080, Window 12, PHL Queue 2
+027.356 Recv DATA 38 24, ID 10082, Window 33  11
+027.357 Send NAK  32
+027.357 Send Half ACK 34 35 36 37 38
+027.576 Send DATA 37 32, ID 20081, Window 13, PHL Queue 22
+027.622 Recv DATA 39 24, ID 10083, Window 33  11
+027.840 Send DATA 38 32, ID 20082, Window 14, PHL Queue 22
+027.888 Recv DATA 40 25, ID 10084, Window 33  11
+027.918 Recv NAK  25
+027.918 Send DATA 26 32, ID 20070, Window 13, PHL Queue 452
+027.919 Recv Half ACK 27 28 29 30 31 32 33 34
+028.183 Recv DATA 41 25, ID 10085, Window 33  11
+028.370 Send DATA 39 32, ID 20083, Window 14, PHL Queue 18
+028.401 Recv DATA 42 25, ID 10086, Window 33  11
+028.401 Impose noise on received data, 22/219368=1.0E-004
+028.631 Send DATA 40 32, ID 20084, Window 15, PHL Queue 24
+028.693 Receiver Error 15: Bad CRC checksum
+028.894 Send DATA 41 32, ID 20085, Window 16, PHL Queue 26
+028.956 Recv DATA 43 25, ID 10087, Window 33  11
+029.064 Impose noise on received data, 23/224784=1.0E-004
+029.157 Send DATA 42 32, ID 20086, Window 17, PHL Queue 28
+029.217 Recv DATA  0 25, ID 10088, Window 33  11
+029.248 Recv ACK  34
+029.421 Send DATA 43 32, ID 20087, Window  9, PHL Queue 28
+029.530 Receiver Error 16: Bad CRC checksum
+029.530 Impose noise on received data, 24/228512=1.1E-004
+029.546 Recv NAK  34
+029.546 Send DATA 35 32, ID 20079, Window  9, PHL Queue 338
+029.547 Recv Half ACK 37 38 39
+029.794 Recv DATA  2 34, ID 10090, Window 33  11
+029.948 Send DATA  0 32, ID 20088, Window 10, PHL Queue 30
+030.026 Receiver Error 17: Bad CRC checksum
+030.212 Send DATA  1 32, ID 20089, Window 11, PHL Queue 30
+030.289 Recv DATA  4 34, ID 10092, Window 33  11
+030.350 Timeout DATA 36, retransmit 5
+030.350 Send DATA 36 32, ID 20080, Window 11, PHL Queue 282
+030.568 Recv DATA  5 34, ID 10093, Window 33  11
+030.741 Send DATA  2 32, ID 20090, Window 12, PHL Queue 28
+030.819 Impose noise on received data, 25/238824=1.0E-004
+030.849 Recv DATA 39 34, ID 10083, Window 33  11
+030.850 Discard DATA 39, duplicated data
+031.006 Send DATA  3 32, ID 20091, Window 13, PHL Queue 26
+031.084 Recv DATA  6 34, ID 10094, Window 33  11
+031.272 Send DATA  4 32, ID 20092, Window 14, PHL Queue 24
+031.351 Receiver Error 18: Bad CRC checksum
+031.537 Send DATA  5 32, ID 20093, Window 15, PHL Queue 20
+031.614 Recv DATA  8 34, ID 10096, Window 33  11
+031.799 Send DATA  6 32, ID 20094, Window 16, PHL Queue 24
+031.844 Recv DATA  9 34, ID 10097, Window 33  11
+032.061 Send DATA  7 32, ID 20095, Window 17, PHL Queue 28
+032.138 Recv DATA 33 34, ID 10077, Window 33  11
+032.140 .... 78 packets received, 5168 bps, 64.60%, Err 25 (1.0e-004)
+032.141 Send ACK   0
+032.322 Send DATA  8  0, ID 20096, Window 18, PHL Queue 48
+032.324 Impose noise on received data, 26/250848=1.0E-004
+032.429 Recv DATA 10 34, ID 10098, Window  1  23
+032.430 Send NAK   0
+032.431 Send Half ACK 2 4 5 6 8 9 10
+032.611 Send DATA  9  0, ID 20097, Window 19, PHL Queue 26
+032.673 Receiver Error 19: Bad CRC checksum
+032.871 Send DATA 10  0, ID 20098, Window 20, PHL Queue 34
+032.918 Timeout DATA 35, retransmit 6
+032.919 Send DATA 35  0, ID 20079, Window 20, PHL Queue 468
+032.949 Recv DATA 41 34, ID 10085, Window  1  23
+032.949 Discard DATA 41, out of receiving window
+033.178 Recv DATA 42 34, ID 10086, Window  1  23
+033.179 Discard DATA 42, out of receiving window
+033.271 Send ACK   0
+033.411 Send DATA 11  0, ID 20099, Window 21, PHL Queue 24
+033.472 Recv DATA 11 34, ID 10099, Window  1  23
+033.550 Impose noise on received data, 27/260672=1.0E-004
+033.658 Impose noise on received data, 28/261536=1.1E-004
+033.689 Send Queue Empty
+033.689 Send DATA 12  0, ID 20100, Window 22, PHL Queue 0
+033.720 Recv DATA 12 34, ID 10100, Window  1  23
+033.953 Send Queue Empty
+033.953 Send DATA 40  0, ID 20084, Window 22, PHL Queue 0
+033.954 Rexmit  DATA 40 (Channel IDLE)
+033.985 Receiver Error 20: Bad CRC checksum
+034.016 Impose noise on received data, 29/264400=1.1E-004
+034.141 Impose noise on received data, 30/265400=1.1E-004
+034.202 Send DATA 41  0, ID 20085, Window 22, PHL Queue 26
+034.203 Rexmit  DATA 41 (Channel IDLE)
+034.278 Recv DATA 14 34, ID 10102, Window  1  23
+034.464 Send DATA 42  0, ID 20086, Window 22, PHL Queue 30
+034.465 Rexmit  DATA 42 (Channel IDLE)
+034.526 Receiver Error 21: Bad CRC checksum
+034.743 Send Queue Empty
+034.743 Send DATA 43  0, ID 20087, Window 22, PHL Queue 0
+034.745 Rexmit  DATA 43 (Channel IDLE)
+034.774 Recv DATA 16 34, ID 10104, Window  1  23
+035.008 Send Queue Empty
+035.008 Send DATA 37  0, ID 20081, Window 22, PHL Queue 0
+035.009 Rexmit  DATA 37 (Channel IDLE)
+035.070 Recv DATA 17 34, ID 10105, Window  1  23
+035.255 Send DATA 38  0, ID 20082, Window 22, PHL Queue 32
+035.257 Rexmit  DATA 38 (Channel IDLE)
+035.317 Recv DATA 18 34, ID 10106, Window  1  23
+035.364 Impose noise on received data, 31/275184=1.1E-004
+035.533 Send DATA 39  0, ID 20083, Window 22, PHL Queue 4
+035.534 Rexmit  DATA 39 (Channel IDLE)
+035.564 Recv DATA 10 34, ID 10098, Window  1  23
+035.565 Discard DATA 10, duplicated data
+035.777 Send DATA  0  0, ID 20088, Window 22, PHL Queue 44
+035.778 Rexmit  DATA  0 (Channel IDLE)
+035.855 Receiver Error 22: Bad CRC checksum
+036.055 Send DATA  1  0, ID 20089, Window 22, PHL Queue 16
+036.056 Rexmit  DATA  1 (Channel IDLE)
+036.056 Impose noise on received data, 32/280720=1.1E-004
+036.100 Recv DATA 20 34, ID 10108, Window  1  23
+036.317 Send DATA 36  0, ID 20080, Window 22, PHL Queue 20
+036.318 Rexmit  DATA 36 (Channel IDLE)
+036.377 Receiver Error 23: Bad CRC checksum
+036.439 Timeout DATA 35, retransmit 7
+036.439 Send DATA 35  0, ID 20079, Window 22, PHL Queue 304
+036.644 Recv DATA 21 34, ID 10109, Window  1  23
+036.831 Send DATA  2  0, ID 20090, Window 22, PHL Queue 48
+036.832 Rexmit  DATA  2 (Channel IDLE)
+036.906 Recv DATA 22 34, ID 10110, Window  1  23
+037.108 Send DATA  3  0, ID 20091, Window 22, PHL Queue 22
+037.109 Rexmit  DATA  3 (Channel IDLE)
+037.155 Recv DATA  2 34, ID 10090, Window  1  23
+037.155 Discard DATA  2, duplicated data
+037.370 Send DATA  4  0, ID 20092, Window 22, PHL Queue 26
+037.370 Rexmit  DATA  4 (Channel IDLE)
+037.416 Recv DATA  3 34, ID 10091, Window  1  23
+037.634 Send DATA  5  0, ID 20093, Window 22, PHL Queue 26
+037.635 Rexmit  DATA  5 (Channel IDLE)
+037.682 Recv DATA  4 34, ID 10092, Window  1  23
+037.683 Discard DATA  4, duplicated data
+037.713 Recv ACK   1
+037.896 Send DATA 13  0, ID 20101, Window 12, PHL Queue 30
+037.958 Recv DATA  5  1, ID 10093, Window  1  23
+037.959 Discard DATA  5, duplicated data
+038.159 Send DATA 14  0, ID 20102, Window 13, PHL Queue 32
+038.205 Recv DATA  6  2, ID 10094, Window  1  23
+038.206 Discard DATA  6, duplicated data
+038.237 Recv ACK   5
+038.422 Send DATA 15  0, ID 20103, Window 10, PHL Queue 34
+038.469 Recv DATA  7  5, ID 10095, Window  1  23
+038.686 Send DATA 16  0, ID 20104, Window 11, PHL Queue 34
+038.764 Recv DATA  8  5, ID 10096, Window  1  23
+038.765 Discard DATA  8, duplicated data
+038.948 Send DATA 17  0, ID 20105, Window 12, PHL Queue 38
+039.042 Recv DATA  9  5, ID 10097, Window  1  23
+039.043 Discard DATA  9, duplicated data
+039.074 Recv NAK   5
+039.074 Send DATA  6  0, ID 20094, Window 12, PHL Queue 376
+039.075 Recv Half ACK 8 9 10 11 12 13
+039.322 Recv DATA 11  5, ID 10099, Window  1  23
+039.323 Discard DATA 11, duplicated data
+039.476 Send DATA 18  0, ID 20106, Window 13, PHL Queue 38
+039.553 Recv DATA 12  5, ID 10100, Window  1  23
+039.553 Discard DATA 12, duplicated data
+039.754 Send DATA 19  0, ID 20107, Window 14, PHL Queue 10
+039.830 Recv DATA  1  5, ID 10089, Window  1  23
+039.830 .... 90 packets received, 4775 bps, 59.68%, Err 32 (1.0e-004)
+039.832 Send ACK  12
+040.018 Send DATA 20 12, ID 20108, Window 15, PHL Queue 24
+040.081 Recv DATA 13  5, ID 10101, Window 13  35
+040.081 Send ACK  14
+040.283 Send DATA 21 14, ID 20109, Window 16, PHL Queue 36
+040.346 Recv DATA 14  5, ID 10102, Window 15  37
+040.347 Discard DATA 14, out of receiving window
+040.530 Impose noise on received data, 33/316512=1.0E-004
+040.560 Send DATA 22 14, ID 20110, Window 17, PHL Queue 10
+040.622 Recv DATA 15  6, ID 10103, Window 15  37
+040.623 Send ACK  18
+040.670 Recv NAK   6
+040.670 Send DATA  7 18, ID 20095, Window 16, PHL Queue 364
+040.671 Recv Half ACK 8 9 10 11 12 13 14 15 16 17
+040.903 Receiver Error 24: Bad CRC checksum
+040.903 Send NAK  18
+040.903 Send Half ACK 20 21 22
+041.090 Send DATA 23 18, ID 20111, Window 17, PHL Queue 40
+041.167 Recv DATA 23  6, ID 10111, Window 19  41
+041.356 Send DATA 24 18, ID 20112, Window 18, PHL Queue 36
+041.448 Recv DATA 24  6, ID 10112, Window 19  41
+041.617 Send DATA 25 18, ID 20113, Window 19, PHL Queue 42
+041.710 Recv DATA 25  6, ID 10113, Window 19  41
+041.819 Impose noise on received data, 34/326824=1.0E-004
+041.881 Send DATA 26 18, ID 20114, Window 20, PHL Queue 42
+041.959 Recv DATA 26  6, ID 10114, Window 19  41
+041.991 Recv ACK  17
+042.162 Impose noise on received data, 35/329568=1.1E-004
+042.163 Send DATA 27 18, ID 20115, Window 10, PHL Queue 8
+042.225 Receiver Error 25: Bad CRC checksum
+042.256 Recv NAK  17
+042.256 Send DATA 18 18, ID 20106, Window 10, PHL Queue 410
+042.257 Recv Half ACK 19 20 21 22 23
+042.517 Receiver Error 26: Bad CRC checksum
+042.672 Send DATA 28 18, ID 20116, Window 11, PHL Queue 44
+042.749 Recv DATA 28 17, ID 10116, Window 19  41
+042.937 Send DATA 29 18, ID 20117, Window 12, PHL Queue 42
+042.999 Recv DATA 29 17, ID 10117, Window 19  41
+043.202 Send DATA 30 18, ID 20118, Window 13, PHL Queue 40
+043.262 Recv DATA 30 17, ID 10118, Window 19  41
+043.463 Send DATA 31 18, ID 20119, Window 14, PHL Queue 46
+043.556 Recv DATA 31 17, ID 10119, Window 19  41
+043.726 Send DATA 32 18, ID 20120, Window 15, PHL Queue 48
+043.820 Recv DATA 32 17, ID 10120, Window 19  41
+043.974 Impose noise on received data, 36/343944=1.0E-004
+044.005 Send DATA 33 18, ID 20121, Window 16, PHL Queue 20
+044.084 Recv DATA 33 17, ID 10121, Window 19  41
+044.254 Send DATA 34 18, ID 20122, Window 17, PHL Queue 48
+044.348 Receiver Error 27: Bad CRC checksum
+044.426 Timeout DATA 24, retransmit 8
+044.426 Send DATA 24 18, ID 20112, Window 17, PHL Queue 232
+044.610 Recv DATA 34 17, ID 10122, Window 19  41
+044.611 Impose noise on received data, 37/349152=1.1E-004
+044.795 Send DATA 35 18, ID 20123, Window 18, PHL Queue 22
+044.873 Recv DATA 35 17, ID 10123, Window 19  41
+045.075 Send Queue Empty
+045.076 Send DATA 36 18, ID 20124, Window 19, PHL Queue 0
+045.139 Receiver Error 28: Bad CRC checksum
+045.339 Send Queue Empty
+045.339 Send DATA 37 18, ID 20125, Window 20, PHL Queue 0
+045.385 Recv DATA 37 17, ID 10125, Window 19  41
+045.589 Send DATA 38 18, ID 20126, Window 21, PHL Queue 18
+045.667 Recv DATA 19 17, ID 10107, Window 19  41
+045.668 .... 108 packets received, 4977 bps, 62.21%, Err 37 (1.0e-004)
+045.668 Send ACK  26
+045.697 Timeout DATA 18, retransmit 9
+045.697 Send DATA 18 26, ID 20106, Window 21, PHL Queue 344
+045.915 Recv DATA 38 17, ID 10126, Window 27   5
+045.916 Send NAK  26
+045.916 Send Half ACK 28 29 30 31 32 33 34 35 37 38
+046.144 Send DATA 39 26, ID 20127, Window 22, PHL Queue 12
+046.189 Recv DATA 39 17, ID 10127, Window 27   5
+046.390 Send DATA 25 26, ID 20113, Window 22, PHL Queue 48
+046.391 Rexmit  DATA 25 (Channel IDLE)
+046.451 Recv DATA 40 17, ID 10128, Window 27   5
+046.669 Send DATA 26 26, ID 20114, Window 22, PHL Queue 18
+046.670 Rexmit  DATA 26 (Channel IDLE)
+046.716 Recv DATA 24 17, ID 10112, Window 27   5
+046.717 Discard DATA 24, out of receiving window
+046.748 Recv ACK  32
+046.920 Send DATA 40 26, ID 20128, Window  8, PHL Queue 44
+046.983 Recv DATA 41 32, ID 10129, Window 27   5
+047.184 Send DATA 41 26, ID 20129, Window  9, PHL Queue 44
+047.278 Recv DATA 27 32, ID 10115, Window 27   5
+047.279 Send ACK  35
+047.310 Recv NAK  32
+047.310 Send DATA 33 35, ID 20121, Window  9, PHL Queue 396
+047.311 Recv Half ACK 34 35 36 37
+047.433 Impose noise on received data, 38/371736=1.0E-004
+047.464 Impose noise on received data, 39/371984=1.0E-004
+047.527 Recv DATA 42 32, ID 10130, Window 36  14
+047.527 Send NAK  35
+047.528 Send Half ACK 37 38 39 40 41 42
+047.742 Send DATA 42 35, ID 20130, Window 10, PHL Queue 26
+047.788 Receiver Error 29: Bad CRC checksum
+048.020 Send Queue Empty
+048.020 Send DATA 43 35, ID 20131, Window 11, PHL Queue 0
+048.066 Recv DATA  0 32, ID 10132, Window 36  14
+048.264 Send DATA  0 35, ID 20132, Window 12, PHL Queue 36
+048.311 Recv DATA  1 32, ID 10133, Window 36  14
+048.358 Recv ACK  37
+048.528 Send DATA  1 35, ID 20133, Window  8, PHL Queue 36
+048.604 Recv DATA  2 37, ID 10134, Window 36  14
+048.791 Send DATA  2 35, ID 20134, Window  9, PHL Queue 38
+048.869 Recv DATA 36 37, ID 10124, Window 36  14
+048.869 .... 125 packets received, 5373 bps, 67.17%, Err 39 (1.0e-004)
+048.872 Send ACK  42
+048.901 Recv NAK  37
+048.902 Send DATA 38 42, ID 20126, Window  9, PHL Queue 418
+048.904 Recv Half ACK 41 42
+049.148 Recv DATA  3 37, ID 10135, Window 43  21
+049.149 Send NAK  42
+049.149 Send Half ACK 0 1 2 3
+049.210 Timeout DATA 39, retransmit 10
+049.210 Send DATA 39 42, ID 20127, Window  9, PHL Queue 292
+049.425 Recv DATA  4 37, ID 10136, Window 43  21
+049.532 Impose noise on received data, 40/388528=1.0E-004
+049.611 Send DATA  3 42, ID 20135, Window 10, PHL Queue 18
+049.658 Recv DATA  5 37, ID 10137, Window 43  21
+049.751 Impose noise on received data, 41/390280=1.1E-004
+049.873 Send DATA  4 42, ID 20136, Window 11, PHL Queue 22
+049.935 Receiver Error 30: Bad CRC checksum
+050.139 Send DATA  5 42, ID 20137, Window 12, PHL Queue 18
+050.200 Receiver Error 31: Bad CRC checksum
+050.403 Send DATA  6 42, ID 20138, Window 13, PHL Queue 18
+050.434 Recv DATA 43 38, ID 10131, Window 43  21
+050.436 Send ACK   5
+050.666 Send DATA  7  5, ID 20139, Window 13, PHL Queue 34
+050.697 Recv DATA  8 39, ID 10140, Window  6  28
+050.698 Send NAK   5
+050.698 Send Half ACK 8
+050.744 Recv NAK  39
+050.744 Send DATA 40  5, ID 20128, Window 12, PHL Queue 452
+050.745 Recv Half ACK 41 42 43 0 1 2 3
+050.996 Recv DATA  9 39, ID 10141, Window  6  28
+051.197 Send DATA  8  5, ID 20140, Window 13, PHL Queue 44
+051.259 Recv DATA 10 39, ID 10142, Window  6  28
+051.353 Impose noise on received data, 42/403096=1.0E-004
+051.463 Send DATA  9  5, ID 20141, Window 14, PHL Queue 40
+051.524 Recv DATA 11 39, ID 10143, Window  6  28
+051.726 Send DATA 10  5, ID 20142, Window 15, PHL Queue 42
+051.757 Receiver Error 32: Bad CRC checksum
+052.005 Send DATA 11  5, ID 20143, Window 16, PHL Queue 12
+052.053 Recv DATA  6 39, ID 10138, Window  6  28
+052.053 .... 139 packets received, 5601 bps, 70.01%, Err 42 (1.0e-004)
+052.084 Recv ACK   7
+052.254 Send DATA 12  6, ID 20144, Window  5, PHL Queue 42
+052.316 Recv DATA 13  7, ID 10145, Window  7  29
+052.317 Send NAK   6
+052.317 Send Half ACK 8 9 10 11 13
+052.534 Send DATA 13  6, ID 20145, Window  6, PHL Queue 34
+052.581 Recv DATA 14  8, ID 10146, Window  7  29
+052.797 Send DATA 14  6, ID 20146, Window  6, PHL Queue 36
+052.859 Recv DATA 15  9, ID 10147, Window  7  29
+053.061 Send DATA 15  6, ID 20147, Window  6, PHL Queue 36
+053.139 Recv DATA 16 10, ID 10148, Window  7  29
+053.324 Send DATA 16  6, ID 20148, Window  6, PHL Queue 38
+053.386 Recv DATA  7 11, ID 10139, Window  7  29
+053.386 Send ACK  11
+053.617 Recv DATA  7 12, ID 10139, Window 12  34
+053.618 Discard DATA  7, out of receiving window
+053.618 Send Queue Empty
+053.618 Send DATA 17 11, ID 20149, Window  5, PHL Queue 0
+053.663 Impose noise on received data, 43/421464=1.0E-004
+053.864 Send DATA 18 11, ID 20150, Window  6, PHL Queue 28
+053.895 Recv DATA 17 13, ID 10149, Window 12  34
+053.896 Send NAK  11
+053.896 Send Half ACK 13 14 15 16 17
+054.034 Impose noise on received data, 44/424544=1.0E-004
+054.144 Send DATA 19 11, ID 20151, Window  6, PHL Queue 20
+054.206 Receiver Error 33: Bad CRC checksum
+054.422 Send Queue Empty
+054.422 Send DATA 20 11, ID 20152, Window  7, PHL Queue 0
+054.453 Receiver Error 34: Bad CRC checksum
+054.484 Impose noise on received data, 45/428144=1.1E-004
+054.673 Send DATA 21 11, ID 20153, Window  8, PHL Queue 18
+054.719 Recv DATA 20 16, ID 10152, Window 12  34
+054.935 Receiver Error 35: Bad CRC checksum
+054.936 Send DATA 22 11, ID 20154, Window  6, PHL Queue 20
+055.215 Send Queue Empty
+055.215 Send DATA 23 11, ID 20155, Window  7, PHL Queue 0
+055.245 Recv DATA 12 18, ID 10144, Window 12  34
+055.246 .... 145 packets received, 5497 bps, 68.72%, Err 45 (1.0e-004)
+055.247 Send ACK  17
+055.276 Recv NAK  18
+055.276 Send DATA 19 17, ID 20151, Window  5, PHL Queue 468
+055.478 Recv DATA 22 18, ID 10154, Window 18  40
+055.479 Send NAK  17
+055.480 Send Half ACK 20 22
+055.736 Send DATA 24 17, ID 20156, Window  6, PHL Queue 36
+055.767 Recv DATA 23 18, ID 10155, Window 18  40
+055.813 Impose noise on received data, 46/438656=1.0E-004
+055.995 Send DATA 25 17, ID 20157, Window  7, PHL Queue 46
+056.042 Recv DATA 24 18, ID 10156, Window 18  40
+056.133 Impose noise on received data, 47/441216=1.1E-004
+056.225 Impose noise on received data, 48/442072=1.1E-004
+056.271 Send DATA 26 17, ID 20158, Window  8, PHL Queue 22
+056.301 Recv DATA 25 18, ID 10157, Window 18  40
+056.535 Receiver Error 36: Bad CRC checksum
+056.535 Send DATA 27 17, ID 20159, Window  9, PHL Queue 22
+056.611 Recv ACK  22
+056.811 Recv DATA 18 22, ID 10150, Window 18  40
+056.811 Send Queue Empty
+056.813 Send DATA 28 18, ID 20160, Window  6, PHL Queue 0
+056.843 Recv NAK  22
+056.843 Send DATA 23 18, ID 20155, Window  6, PHL Queue 518
+056.844 Recv Half ACK 24
+056.995 TCP Disconnected.

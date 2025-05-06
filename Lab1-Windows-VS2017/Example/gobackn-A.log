@@ -1,0 +1,33 @@
+000.000 =============================================================
+000.000                     Station A                               
+000.000 -------------------------------------------------------------
+000.000 Protocol.lib, version 4.0, jiangyanjun0718@bupt.edu.cn
+000.000 Channel: 8000 bps, 270 ms propagation delay, bit error rate 1.0E-005
+000.000 Log file "F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\example\gobackn-A.log", TCP port 59144, debug mask 0x00
+000.000 Station A is waiting for station B on TCP port 59144 ... Done.
+000.586 New epoch: Sun May 04 15:55:00 2025
+000.586 =================================================================
+000.586 
+000.587 Designed by Jiang Yanjun, build: Oct 28 2018  16:37:57
+000.587 Protocol Options: Piggybacking (Enabled), NAK (Enabled)
+003.451 .... 4 packets received, 3837 bps, 47.96%, Err 1 (5.3e-005)
+005.525 .... 12 packets received, 5839 bps, 72.99%, Err 1 (2.8e-005)
+007.654 .... 20 packets received, 6463 bps, 80.78%, Err 1 (1.9e-005)
+009.813 .... 28 packets received, 6749 bps, 84.36%, Err 1 (1.4e-005)
+011.896 .... 36 packets received, 6969 bps, 87.11%, Err 1 (1.2e-005)
+013.993 .... 44 packets received, 7108 bps, 88.85%, Err 1 (9.7e-006)
+016.117 .... 52 packets received, 7195 bps, 89.94%, Err 1 (8.3e-006)
+018.238 .... 60 packets received, 7262 bps, 90.77%, Err 1 (7.3e-006)
+020.379 .... 68 packets received, 7305 bps, 91.32%, Err 1 (6.5e-006)
+022.460 .... 76 packets received, 7361 bps, 92.02%, Err 1 (5.8e-006)
+024.581 .... 84 packets received, 7394 bps, 92.43%, Err 1 (5.3e-006)
+026.700 .... 92 packets received, 7423 bps, 92.78%, Err 1 (4.9e-006)
+028.811 .... 100 packets received, 7449 bps, 93.11%, Err 1 (4.5e-006)
+030.940 .... 108 packets received, 7466 bps, 93.33%, Err 1 (4.2e-006)
+033.058 .... 112 packets received, 7226 bps, 90.33%, Err 3 (1.2e-005)
+035.131 .... 120 packets received, 7268 bps, 90.85%, Err 3 (1.1e-005)
+037.264 .... 128 packets received, 7292 bps, 91.15%, Err 3 (1.0e-005)
+039.378 .... 136 packets received, 7318 bps, 91.47%, Err 3 (9.8e-006)
+041.500 .... 144 packets received, 7339 bps, 91.74%, Err 3 (9.3e-006)
+043.633 .... 152 packets received, 7356 bps, 91.95%, Err 3 (8.8e-006)
+045.723 .... 160 packets received, 7379 bps, 92.24%, Err 3 (8.4e-006)
