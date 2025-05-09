@@ -1,14 +1,21 @@
-﻿  datalink.c
-F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.c(17,9): warning C4005: “FRAME_DATA”: 宏重定义
-      F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.h(3,9):
+﻿  crc32.c
+  datalink.c
+C:\Users\SDS202\source\repos\network_lab1\Lab1-Windows-VS2017\datalink.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  getopt.c
+C:\Users\SDS202\source\repos\network_lab1\Lab1-Windows-VS2017\datalink.c(17,9): warning C4005: “FRAME_DATA”: 宏重定义
+      C:\Users\SDS202\source\repos\network_lab1\Lab1-Windows-VS2017\datalink.h(3,9):
       参见“FRAME_DATA”的前一个定义
   
-F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.c(18,9): warning C4005: “FRAME_ACK”: 宏重定义
-      F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.h(4,9):
+C:\Users\SDS202\source\repos\network_lab1\Lab1-Windows-VS2017\datalink.c(18,9): warning C4005: “FRAME_ACK”: 宏重定义
+      C:\Users\SDS202\source\repos\network_lab1\Lab1-Windows-VS2017\datalink.h(4,9):
       参见“FRAME_ACK”的前一个定义
   
-F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.c(19,9): warning C4005: “FRAME_NAK”: 宏重定义
-      F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\datalink.h(5,9):
+C:\Users\SDS202\source\repos\network_lab1\Lab1-Windows-VS2017\datalink.c(19,9): warning C4005: “FRAME_NAK”: 宏重定义
+      C:\Users\SDS202\source\repos\network_lab1\Lab1-Windows-VS2017\datalink.h(5,9):
       参见“FRAME_NAK”的前一个定义
   
-  datalink.vcxproj -> F:\Code\20250418(network lab1)\Lab1-Windows-VS2017\Debug\datalink.exe
+  lprintf.c
+  protocol.c
+  正在生成代码...
+  LINK : 没有找到 C:\Users\SDS202\source\repos\network_lab1\Lab1-Windows-VS2017\Debug\datalink.exe 或上一个增量链接没有生成它；正在执行完全链接
+  datalink.vcxproj -> C:\Users\SDS202\source\repos\network_lab1\Lab1-Windows-VS2017\Debug\datalink.exe

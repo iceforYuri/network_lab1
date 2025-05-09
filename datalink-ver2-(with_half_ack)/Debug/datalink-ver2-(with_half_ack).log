@@ -1,0 +1,20 @@
+﻿  crc32.c
+  datalink.c
+C:\Users\SDS202\source\repos\network_lab1\datalink-ver2-(with_half_ack)\datalink.c(17,9): warning C4005: “FRAME_DATA”: 宏重定义
+      C:\Users\SDS202\source\repos\network_lab1\datalink-ver2-(with_half_ack)\datalink.h(3,9):
+      参见“FRAME_DATA”的前一个定义
+  
+C:\Users\SDS202\source\repos\network_lab1\datalink-ver2-(with_half_ack)\datalink.c(18,9): warning C4005: “FRAME_ACK”: 宏重定义
+      C:\Users\SDS202\source\repos\network_lab1\datalink-ver2-(with_half_ack)\datalink.h(4,9):
+      参见“FRAME_ACK”的前一个定义
+  
+C:\Users\SDS202\source\repos\network_lab1\datalink-ver2-(with_half_ack)\datalink.c(19,9): warning C4005: “FRAME_NAK”: 宏重定义
+      C:\Users\SDS202\source\repos\network_lab1\datalink-ver2-(with_half_ack)\datalink.h(5,9):
+      参见“FRAME_NAK”的前一个定义
+  
+  getopt.c
+  lprintf.c
+  protocol.c
+C:\Users\SDS202\source\repos\network_lab1\datalink-ver2-(with_half_ack)\protocol.c(169,18): warning C4133: “函数”: 从“char [1024]”到“LPCWSTR”的类型不兼容
+  正在生成代码...
+  datalink-ver2-(with_half_ack).vcxproj -> C:\Users\SDS202\source\repos\network_lab1\Lab1-Windows-VS2017\Debug\datalink-ver2-(with_half_ack).exe
