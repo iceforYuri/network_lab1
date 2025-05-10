@@ -6,6 +6,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "datalink", "datalink.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "datalink-ver2-(with_half_ack)", "..\datalink-ver2-(with_half_ack)\datalink-ver2-(with_half_ack).vcxproj", "{6E5A2548-FF2F-4D51-BEBA-ABED583D1B46}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "datalink-ver3-(with_multiple_nak)", "..\datalink-ver3-(with_multiple_nak)\datalink-ver3-(with_multiple_nak).vcxproj", "{3F9A5A65-0D00-4CE0-AEC6-00EB06166415}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -20,6 +22,10 @@ Global
 		{6E5A2548-FF2F-4D51-BEBA-ABED583D1B46}.Debug|Win32.Build.0 = Debug|Win32
 		{6E5A2548-FF2F-4D51-BEBA-ABED583D1B46}.Release|Win32.ActiveCfg = Release|Win32
 		{6E5A2548-FF2F-4D51-BEBA-ABED583D1B46}.Release|Win32.Build.0 = Release|Win32
+		{3F9A5A65-0D00-4CE0-AEC6-00EB06166415}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F9A5A65-0D00-4CE0-AEC6-00EB06166415}.Debug|Win32.Build.0 = Debug|Win32
+		{3F9A5A65-0D00-4CE0-AEC6-00EB06166415}.Release|Win32.ActiveCfg = Release|Win32
+		{3F9A5A65-0D00-4CE0-AEC6-00EB06166415}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

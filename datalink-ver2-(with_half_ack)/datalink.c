@@ -1,19 +1,18 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <windows.h>
 
 #include "protocol.h"
 #include "datalink.h"
 
-#define DATA_TIMER 2000 // Data帧超时
-#define ACK_TIMER 260   // Ack帧超时
+#define DATA_TIMER 1950 
+#define ACK_TIMER 260   
+#define RETRX_TIMER 100
 #define MAX_SEQ 127
-#define NR_BUFS ((MAX_SEQ + 1) / 2) // 窗口大小 (必须是偶数)
+#define NR_BUFS ((MAX_SEQ + 1) / 2) 
 #define MAX_WINDOW_SIZE NR_BUFS
 
-typedef unsigned char seq_nr;
-
-/* FRAME kind */
 #define FRAME_DATA 0
 #define FRAME_ACK 1
 #define FRAME_NAK 2
@@ -25,6 +24,8 @@ typedef unsigned char seq_nr;
     else             \
         k = 0
 
+typedef unsigned char seq_nr;
+
 struct FRAME
 {
     unsigned char kind;
@@ -34,12 +35,6 @@ struct FRAME
     unsigned int padding;
 };
 
-static bool between(seq_nr a, seq_nr b, seq_nr c) // 判断序号是否在窗口内
-{
-    return ((a <= b && b < c) || (c < a && a <= b) || (b < c && c < a));
-}
-
-// --- 全局变量 ---
 static seq_nr next_frame_to_send = 0; // 发送方下一个要发送的帧序号
 static seq_nr ack_expected = 0;       // 发送方下一个要确认的帧序号
 static seq_nr frame_expected = 0;     // 接收方下一个要接收的帧序号
@@ -55,7 +50,12 @@ static bool no_nak = true; // 是否禁止连续发送 NAK
 static bool no_retransmission = true;
 static seq_nr retransmission_seq;
 
-static void show_received_buffer()
+static bool between(seq_nr a, seq_nr b, seq_nr c)
+{
+    return ((a <= b && b < c) || (c < a && a <= b) || (b < c && c < a));
+}
+
+/*static void show_received_buffer()
 {
     printf("\033[33m                                             ");
     for (int i = 0; i < 16; i++) {
@@ -66,32 +66,28 @@ static void show_received_buffer()
             printf("  ");
     }
     printf("|\033[0m\n");
-}
+}*/
 
-static void put_frame(unsigned char* frame, int len) // 发送帧到物理层
+static void put_frame(unsigned char* frame, int len) 
 {
     *(unsigned int*)(frame + len) = crc32(frame, len);
     send_frame(frame, len + 4);
     phl_ready = 0;
 }
 
-/* 发送数据帧 */
 static void send_data_frame(seq_nr frame_nr)
 {
     struct FRAME s;
     s.kind = FRAME_DATA;
     s.seq = frame_nr;
-    s.ack = (frame_expected + MAX_SEQ) % (MAX_SEQ + 1);   // 发送方下一个要确认的帧序号
-    memcpy(s.data, out_buf[frame_nr % NR_BUFS], PKT_LEN); // 将数据拷贝到帧中
-    printf("\033[32m");
-    dbg_frame("Send DATA %d %d, ID %d |%d|%d|%d|\033[0m\n", s.seq, s.ack, *(short*)s.data, ack_expected, next_frame_to_send, phl_sq_len());
+    s.ack = (frame_expected + MAX_SEQ) % (MAX_SEQ + 1);   
+    memcpy(s.data, out_buf[frame_nr % NR_BUFS], PKT_LEN); 
+    dbg_frame("\033[32mSend DATA %d %d, ID %d [%d|%d) phl_sq:%d\033[0m\n", s.seq, s.ack, *(short*)s.data, ack_expected, next_frame_to_send, phl_sq_len());
     put_frame((unsigned char*)&s, 3 + PKT_LEN);
-    start_timer(frame_nr % NR_BUFS, DATA_TIMER); // 启动数据帧计时器
+    start_timer(frame_nr % NR_BUFS, DATA_TIMER); 
     stop_ack_timer();
 }
 
-/* 发送 ACK 帧 */
-// 与 send_data_frame 类似，但发送 ACK 帧时不需要携带数据，且序号字段未使用
 static void send_ack_frame(void)
 {
     struct FRAME s;
@@ -104,20 +100,17 @@ static void send_ack_frame(void)
     stop_ack_timer();
 }
 
-/* 发送 NAK 帧 */
-// NAK与ACK类似，但ACK帧的ack字段是下一个要确认的帧序号，而NAK帧的ack字段是下一个要接收的帧序号
 static void send_nak_frame(void)
 {
     struct FRAME s;
     s.kind = FRAME_NAK;
-
     s.ack = (frame_expected + MAX_SEQ) % (MAX_SEQ + 1);
     s.seq = 0; // seq 字段未使用
 
     no_nak = false; // 抑制连续 NAK
 
     dbg_frame("Send NAK (ack=%d, 即不接受%d)\n", s.ack, s.ack + 1);
-    put_frame((unsigned char*)&s, 2); // NAK 帧长度为 2 (kind + ack)
+    put_frame((unsigned char*)&s, 2);
     stop_ack_timer();
 }
 
@@ -140,42 +133,32 @@ static void whether_send_half_ack()
     if (num>0) {
         put_frame((unsigned char*)&s, 3 + num);
         dbg_frame("Send half ACK,确认个数为%d  ", num);
-        for (seq_nr i = 0; i < num; i++) {
-            printf("%d ", s.data[i]);
-        }
         dbg_frame("\n");
     }
 }
 
 int main(int argc, char** argv)
 {
+    SetConsoleOutputCP(65001);
     int event;
-    seq_nr arg; // 接收帧
+    seq_nr arg; 
     struct FRAME f;
     int len = 0;
 
     protocol_init(argc, argv);
 
-    // 初始化
     too_far = NR_BUFS;
-    nbuffered = 0;
-    phl_ready = 0;
-    no_nak = true;
     memset(arrived, 0, sizeof(arrived));
 
     disable_network_layer();
 
     for (;;)
     {
-        // --- 修改: 将 wait_for_event 的参数解释为 seq_nr ---
         event = wait_for_event((int*)&arg); // 强制类型转换，假设返回的是序号
-
         switch (event)
         {
         case NETWORK_LAYER_READY:
-            if (nbuffered < NR_BUFS)
-            {
-                // 正常接收数据并存入发送缓冲区
+            if (nbuffered < NR_BUFS){
                 get_packet(out_buf[next_frame_to_send % NR_BUFS]);
                 nbuffered++;
                 send_data_frame(next_frame_to_send);
@@ -192,7 +175,8 @@ int main(int argc, char** argv)
 
             if (len < 5 || crc32((unsigned char*)&f, len) != 0)
             {
-                switch (f.kind) {
+                switch (f.kind) 
+                {
                 case FRAME_DATA:
                     dbg_event("**** CRC错误 %d号帧错误\n",f.seq);
                     break;
@@ -206,7 +190,6 @@ int main(int argc, char** argv)
 
                 if (no_nak && f.kind != FRAME_HALF_ACK)
                 {
-                    // 校验错误且当前没有NAK时，发送NAK
                     send_nak_frame();
                     whether_send_half_ack();
                 }
@@ -216,18 +199,14 @@ int main(int argc, char** argv)
 
             if (f.kind == FRAME_DATA)
             {
-                printf("\033[33m");
-                dbg_frame("收到 DATA %d %d, ID %d             [%d,%d)\033[0m\n", f.seq, f.ack, *(short*)f.data, frame_expected, too_far);
+                dbg_frame("\033[33mRecv DATA %d %d, ID %d             [%d,%d)\033[0m\n", f.seq, f.ack, *(short*)f.data, frame_expected, too_far);
 
-                // 非预期帧序列号时发送NAK
-                if (f.seq != frame_expected && no_nak)
-                {
+                if (f.seq != frame_expected && no_nak){
                     send_nak_frame();
                     whether_send_half_ack();
                 }
                 else
                 {
-                    // 收到预期帧时，停止ACK计时器
                     start_ack_timer(ACK_TIMER);
                 }
 
@@ -239,7 +218,7 @@ int main(int argc, char** argv)
                         arrived[f.seq % NR_BUFS] = true;
                         memcpy(in_buf[f.seq % NR_BUFS], f.data, PKT_LEN);
 
-                        show_received_buffer();//调试用，输出接收窗口
+                        //show_received_buffer();//调试用，输出接收窗口
 
                         while (arrived[frame_expected % NR_BUFS])
                         {
@@ -256,29 +235,23 @@ int main(int argc, char** argv)
                     }
                     else
                     {
-                        // 这里拆分了逻辑，在收到过ACK后直接重置时钟
-                        printf("\033[31m");
-                        dbg_frame("DATA %d already received\033[0m\n", f.seq);
+                        dbg_frame("\033[31mDATA %d already received\033[0m\n", f.seq);
                         start_ack_timer(ACK_TIMER);
                     }
                 }
                 else
                 {
-                    // 再一次判断
                     dbg_frame("\n");//删了打印会缺少时间
-                    printf("\033[31m");
-                    dbg_frame("DATA %d out of window [%d, %d)\033[0m\n", f.seq, frame_expected, too_far);
+                    dbg_frame("\033[31mDATA %d out of window [%d, %d)\033[0m\n", f.seq, frame_expected, too_far);
                     start_ack_timer(ACK_TIMER);
                 }
             }
 
-            // --- NAK 处理
             if (f.kind == FRAME_NAK)
             {
                 seq_nr missing_seq = (f.ack + 1) % (MAX_SEQ + 1); // 从 ack 推断丢失帧
-                dbg_frame("收到 NAK (ack=%d), 推断丢失 %d\n", f.ack, missing_seq);
+                dbg_frame("Recv NAK (ack=%d), 推断丢失 %d\n", f.ack, missing_seq);
 
-                // 这里又进行判断重传帧是否在当前窗口
                 if (between(ack_expected, missing_seq, next_frame_to_send))
                 {
                     dbg_frame("重传帧 %d (因 NAK)\n", missing_seq);
@@ -288,27 +261,23 @@ int main(int argc, char** argv)
                 {
                     dbg_frame("推断丢失的帧 %d 不在窗口 [%d, %d) 内, 忽略 NAK\n", missing_seq, ack_expected, next_frame_to_send);
                 }
-                // break; // SR-2 没有 break，允许处理捎带确认
             }
 
-            // 添加一个ACK接收的调试警告
             if (f.kind == FRAME_ACK)
             {
-                dbg_frame("收到 ACK %d\n", f.ack);
+                dbg_frame("Recv ACK %d\n", f.ack);
             }
 
             if (f.kind == FRAME_HALF_ACK) {
-                dbg_frame("收到 half ACK, 确认个数为%d  ", f.seq);
+                dbg_frame("Recv half ACK, 确认个数为%d  ", f.seq);
                 dbg_event("停止计时");
                 for (seq_nr i = 0; i < f.seq; i++) {
-                    printf("%d ", f.data[i]);
+                    //printf("%d ", f.data[i]);
                     stop_timer((unsigned int)(f.data[i] % NR_BUFS));
                 }
                 dbg_frame("\n");
             }
 
-            // 处理确认信息
-            // 判断是否在当前窗口内，如果在窗口内，则滑动窗口
             while (between(ack_expected, f.ack, next_frame_to_send))
             {
                 if (no_retransmission == false && retransmission_seq == ack_expected)
@@ -322,7 +291,6 @@ int main(int argc, char** argv)
             dbg_frame("\n");
             break;
 
-            // 主要修改了重传检测帧在不在当前窗口的逻辑
         case DATA_TIMEOUT:
             if (between(ack_expected, arg, next_frame_to_send))
             {
@@ -340,7 +308,7 @@ int main(int argc, char** argv)
                 }
                 else {
                     dbg_event("---- DATA %d 超时，延时300ms\n", arg);
-                    start_timer(arg, 300);
+                    start_timer(arg, RETRX_TIMER);
                 }
             }
             else
@@ -359,7 +327,7 @@ int main(int argc, char** argv)
                 }
                 else {
                     dbg_event("---- DATA %d 超时，延时300ms\n", (arg + NR_BUFS) % (MAX_SEQ + 1));
-                    start_timer(arg, 300);
+                    start_timer(arg, RETRX_TIMER);
                 }
             }
             break;

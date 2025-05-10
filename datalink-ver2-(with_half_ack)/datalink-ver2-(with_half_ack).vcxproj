@@ -129,8 +129,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="crc32.c" />
-    <ClCompile Include="datalink.c" />
+    <ClCompile Include="datalink.c历史版本\0最初给的示例代码 datalink.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="datalink.c历史版本\1肖璨最初代码.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="datalink.c历史版本\2最初看肖璨代码学习用的.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="datalink.c历史版本\3仅halfack无自动延时 65%.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="datalink.c历史版本\halfack完整版.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="getopt.c" />
+    <ClCompile Include="datalink.c" />
     <ClCompile Include="lprintf.c" />
     <ClCompile Include="protocol.c" />
   </ItemGroup>

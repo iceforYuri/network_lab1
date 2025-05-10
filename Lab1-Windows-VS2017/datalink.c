@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <windows.h>
 
 #include "protocol.h"
 #include "datalink.h"
 
-#define DATA_TIMER 1500 // Data帧超时
-#define ACK_TIMER 280   // Ack帧超时
+#define DATA_TIMER 2000 // Data帧超时
+#define ACK_TIMER 270   // Ack帧超时
 #define MAX_SEQ 31
 #define NR_BUFS ((MAX_SEQ + 1) / 2) // 窗口大小 (必须是偶数)
 #define MAX_WINDOW_SIZE NR_BUFS
@@ -39,43 +40,43 @@ static bool between(seq_nr a, seq_nr b, seq_nr c) // 判断序号是否在窗口
 }
 
 // --- 全局变量 ---
-static seq_nr next_frame_to_send = 0; // 发送方下一个要发送的帧序号
-static seq_nr ack_expected = 0;       // 发送方下一个要确认的帧序号
+static seq_nr next_frame_to_send = 0; // Send方下一个要Send的帧序号
+static seq_nr ack_expected = 0;       // Send方下一个要确认的帧序号
 static seq_nr frame_expected = 0;     // 接收方下一个要接收的帧序号
 static seq_nr too_far;                // 接收方下一个要接收的帧序号 (窗口上界)
 
-static unsigned char out_buf[NR_BUFS][PKT_LEN]; // 发送方缓冲区
+static unsigned char out_buf[NR_BUFS][PKT_LEN]; // Send方缓冲区
 static unsigned char in_buf[NR_BUFS][PKT_LEN];  // 接收方缓冲区
 static bool arrived[NR_BUFS];                   // 接收方缓冲区位图 (标记哪些槽已填充)
 
-static int nbuffered = 0;  // 发送方缓冲区中已存放的帧数
+static int nbuffered = 0;  // Send方缓冲区中已存放的帧数
 static int phl_ready = 1;  // 物理层是否准备好接收数据
-static bool no_nak = true; // 是否禁止连续发送 NAK
+static bool no_nak = true; // 是否禁止连续Send NAK
 
-static void put_frame(unsigned char *frame, int len) // 发送帧到物理层
+static void put_frame(unsigned char *frame, int len) // Send帧到物理层
 {
     *(unsigned int *)(frame + len) = crc32(frame, len);
     send_frame(frame, len + 4);
     phl_ready = 0;
 }
 
-/* 发送数据帧 */
+/* Send数据帧 */
 static void send_data_frame(seq_nr frame_nr)
 {
     struct FRAME s;
     s.kind = FRAME_DATA;
     s.seq = frame_nr;
-    s.ack = (frame_expected + MAX_SEQ) % (MAX_SEQ + 1);   // 发送方下一个要确认的帧序号
+    s.ack = (frame_expected + MAX_SEQ) % (MAX_SEQ + 1);   // Send方下一个要确认的帧序号
     memcpy(s.data, out_buf[frame_nr % NR_BUFS], PKT_LEN); // 将数据拷贝到帧中
 
-    dbg_frame("发送 DATA %d %d, ID %d\n", s.seq, s.ack, *(short *)s.data);
+    dbg_frame("Send DATA %d %d, ID %d\n", s.seq, s.ack, *(short *)s.data);
     put_frame((unsigned char *)&s, 3 + PKT_LEN);
     start_timer(frame_nr % NR_BUFS, DATA_TIMER); // 启动数据帧计时器
     stop_ack_timer();
 }
 
-/* 发送 ACK 帧 */
-// 与 send_data_frame 类似，但发送 ACK 帧时不需要携带数据，且序号字段未使用
+/* Send ACK 帧 */
+// 与 send_data_frame 类似，但Send ACK 帧时不需要携带数据，且序号字段未使用
 static void send_ack_frame(void)
 {
     struct FRAME s;
@@ -83,12 +84,12 @@ static void send_ack_frame(void)
     s.ack = (frame_expected + MAX_SEQ) % (MAX_SEQ + 1);
     s.seq = next_frame_to_send;
 
-    dbg_frame("发送 ACK %d\n", s.ack);
+    dbg_frame("Send ACK %d\n", s.ack);
     put_frame((unsigned char *)&s, 2);
     stop_ack_timer();
 }
 
-/* 发送 NAK 帧 */
+/* Send NAK 帧 */
 // NAK与ACK类似，但ACK帧的ack字段是下一个要确认的帧序号，而NAK帧的ack字段是下一个要接收的帧序号
 static void send_nak_frame(void)
 {
@@ -100,13 +101,14 @@ static void send_nak_frame(void)
 
     no_nak = false; // 抑制连续 NAK
 
-    dbg_frame("发送 NAK (ack=%d)\n", s.ack);
+    dbg_frame("Send NAK (ack=%d)\n", s.ack);
     put_frame((unsigned char *)&s, 2); // NAK 帧长度为 2 (kind + ack)
     stop_ack_timer();
 }
 
 int main(int argc, char **argv)
 {
+    SetConsoleOutputCP(65001);
     int event;
     seq_nr arg; // 接收帧
     struct FRAME f;
@@ -134,7 +136,7 @@ int main(int argc, char **argv)
         case NETWORK_LAYER_READY:
             if (nbuffered < NR_BUFS)
             {
-                // 正常接收数据并存入发送缓冲区
+                // 正常接收数据并存入Send缓冲区
                 get_packet(out_buf[next_frame_to_send % NR_BUFS]);
                 nbuffered++;
                 send_data_frame(next_frame_to_send);
@@ -154,7 +156,7 @@ int main(int argc, char **argv)
                 dbg_event("**** CRC错误\n");
                 if (no_nak)
                 {
-                    // 校验错误且当前没有NAK时，发送NAK
+                    // 校验错误且当前没有NAK时，SendNAK
                     send_nak_frame();
                 }
                 break;
@@ -164,7 +166,7 @@ int main(int argc, char **argv)
             {
                 dbg_frame("收到 DATA %d %d, ID %d\n", f.seq, f.ack, *(short *)f.data);
                 dbg_frame("frame_expected = %d, too_far = %d\n", frame_expected, too_far);
-                // 非预期帧序列号时发送NAK
+                // 非预期帧序列号时SendNAK
                 if (f.seq != frame_expected && no_nak)
                 {
                     send_nak_frame();
@@ -185,7 +187,7 @@ int main(int argc, char **argv)
 
                         while (arrived[frame_expected % NR_BUFS])
                         {
-                            // 按序提交网络层，因此实际上不是一并发送
+                            // 按序提交网络层，因此实际上不是一并Send
                             put_packet(in_buf[frame_expected % NR_BUFS], PKT_LEN);
 
                             no_nak = true;

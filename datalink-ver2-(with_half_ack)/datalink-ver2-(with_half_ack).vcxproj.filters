@@ -13,12 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\历史版本文件">
+      <UniqueIdentifier>{2dceaf3e-5450-4b0a-913e-c22aa3bda676}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="crc32.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="datalink.c">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="getopt.c">
@@ -29,6 +29,24 @@
     </ClCompile>
     <ClCompile Include="protocol.c">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="datalink.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="datalink.c历史版本\0最初给的示例代码 datalink.c">
+      <Filter>源文件\历史版本文件</Filter>
+    </ClCompile>
+    <ClCompile Include="datalink.c历史版本\1肖璨最初代码.c">
+      <Filter>源文件\历史版本文件</Filter>
+    </ClCompile>
+    <ClCompile Include="datalink.c历史版本\2最初看肖璨代码学习用的.c">
+      <Filter>源文件\历史版本文件</Filter>
+    </ClCompile>
+    <ClCompile Include="datalink.c历史版本\3仅halfack无自动延时 65%.c">
+      <Filter>源文件\历史版本文件</Filter>
+    </ClCompile>
+    <ClCompile Include="datalink.c历史版本\halfack完整版.c">
+      <Filter>源文件\历史版本文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
